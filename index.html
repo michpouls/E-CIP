@@ -7,26 +7,161 @@
     <link rel="stylesheet" href="./assets/main.css">
     <title>E-CIP</title>
     <style>
-        .sectionCards {
-            width: 1200px;
-        }
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .cardContainer {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            justify-content: center;
-        }
+body {
+    font-family: Arial, sans-serif;
+}
 
-        .cardContainer .card {
-            width: 300px;
-            height: 400px;
-        }
+.headerStyle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    color: black;
+    position: relative;
+    z-index: 1000;
+}
 
-        .cardContainer .card img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-        }
+.headerStyle img {
+    width: 100px;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+}
+
+.navStyle {
+    display: flex;
+}
+
+.navStyle ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navStyle ul li {
+    position: relative;
+}
+
+.navStyle ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navStyle ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    padding: 0.5rem;
+}
+
+.navStyle ul li:hover .dropdown {
+    display: block;
+}
+
+.navStyle ul li .dropdown li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Overlay navigation styles */
+.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: hidden;
+    transition: height 0.5s ease;
+    z-index: 1000;
+}
+
+.overlay.open {
+    height: 100%;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.overlay .overlayContent {
+    position: relative;
+    top: 25%;
+    text-align: center;
+}
+
+.overlay .overlayContent a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    display: block;
+    margin: 10px 0;
+    transition: color 0.3s;
+}
+
+.overlay .overlayContent a:hover {
+    color: #f1f1f1;
+}
+
+/* Dropdown inside the overlay */
+.overlay .dropdown {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+.overlay .dropdown.open {
+    display: block;
+}
+
+.overlay .dropdown li a {
+    font-size: 25px;
+    color: white;
+    padding-left: 20px;
+}
+
+.dropdownToggle {
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    .navStyle {
+        display: none;
+    }
+}
+
     </style>
 </head>
 
