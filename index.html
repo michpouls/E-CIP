@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/main.css">
+    <title>E-CIP</title>
+    <style>
+.cardContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.cardContainer .card{
+    width: 300px;
+    height: 400px;
+}
+.cardContainer .card img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- navigation start -->
+    <header class="headerStyle">
+        <div><img src="./assets/images/ecip_logo lille 2.jpg" alt="Logo"></div>
+        <div class="burger-menu" onclick="openNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="navStyle">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <p>About E-CIP</p>
+                    <ul class="dropdown">
+                        <li><a href="#">Mission</a></li>
+                        <li><a href="#">The E-CIP Concept</a></li>
+                        <li><a href="#">Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">CIP Optimization</a></li>
+                <li><a href="#">E-CIP Plant</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="overlayNav" class="overlay">
+        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlayContent">
+            <a href="#">Home</a>
+            <div class="dropdownContainer">
+                <span class="dropdownToggle" onclick="toggleDropdown()">About E-CIP &#9660;</span>
+                <ul class="dropdown">
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">The E-CIP Concept</a></li>
+                    <li><a href="#">Team</a></li>
+                </ul>
+            </div>
+            <a href="#">CIP Optimization</a>
+            <a href="#">E-CIP Plant</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <!-- navigation end -->
+
+    <!-- hero start -->
+
+    <section class="hero">
+        <img src="./assets/images/Foto mejerianlæg rev 1.jpg" alt="header image">
+        <div class="heroText">
+            <h1>Simply better CIP solutions</h1>
+            <h3>Sustainable and patented CIP concept that saves up to 45% water, wastewater, energy and CO2eq and
+                operational cost, when cleaning large hygienic process plants</h3>
+            <div>
+                <p>Environmental</p>
+                <p>Economical</p>
+                <p>Effective</p>
+                <p>Easy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- hero end -->
+
+    <!-- product and service start -->
+        <div class="cardContainer">
+            <figure class="card">
+                <img src="./assets/images/Grønt firkløver 2 ChatGPT rev 2.JPG" alt="CIP Optimization">
+                <figcaption>
+                    <h3>CIP Optimization</h3>
+                    <button>
+                        Learn More
+                    </button>
+                </figcaption>
+            </figure>
+            <figure class="card">
+                <img src="./assets/images/APO on site.JPG" alt="CIP Plant">
+                <figcaption>
+                    <h3>CIP Plant</h3>
+                    <button>
+                        Learn More
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+    <!-- product and service end -->
+
+    <!-- script -->
+    <script>
+        function openNav() {
+            document.getElementById("overlayNav").classList.add("open");
+        }
+
+        function closeNav() {
+            document.getElementById("overlayNav").classList.remove("open");
+        }
+
+        function toggleDropdown() {
+            const dropdown = document.querySelector(".overlay .dropdown");
+            dropdown.classList.toggle("open");
+        }
+    </script>
+</body>
+
+</html>
