@@ -7,20 +7,26 @@
     <link rel="stylesheet" href="./assets/main.css">
     <title>E-CIP</title>
     <style>
-.cardContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.cardContainer .card{
-    width: 300px;
-    height: 400px;
-}
-.cardContainer .card img{
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
+        .sectionCards {
+            width: 1200px;
+        }
 
+        .cardContainer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+        }
+
+        .cardContainer .card {
+            width: 300px;
+            height: 400px;
+        }
+
+        .cardContainer .card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
     </style>
 </head>
 
@@ -90,6 +96,7 @@
     <!-- hero end -->
 
     <!-- product and service start -->
+    <section class="sectionCards">
         <div class="cardContainer">
             <figure class="card">
                 <img src="./assets/images/Grønt firkløver 2 ChatGPT rev 2.JPG" alt="CIP Optimization">
@@ -110,6 +117,7 @@
                 </figcaption>
             </figure>
         </div>
+    </section>
     <!-- product and service end -->
 
     <!-- script -->
